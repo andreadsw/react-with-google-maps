@@ -20,6 +20,7 @@ ol {
 
 .App-intro {
   font-size: large;
+  margin: 20px 0 20px 0;
 }
 
 @keyframes App-logo-spin {
@@ -27,6 +28,3 @@ ol {
   to { transform: rotate(360deg); }
 }
 
-.map {
-  margin: 20px;
-}

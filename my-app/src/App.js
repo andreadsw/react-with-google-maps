@@ -49,18 +49,23 @@ componentDidMount(){
       }
     ]
 
-    return (
-      <div className="App">
+    return (  
+      <div className="App container">
         <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <h2>Google Maps</h2>
         </div>
         <p className="App-intro">
           Places in London - React using Google maps and Foursquare API
         </p>
-        <div className="map" style={{width:600, height:500 }}>
-        <Map center={location} markers={this.state.venues} />
+        <div className="row">
+          <div className="map col-sm-6" style={{width:450, height:500 }}>
+            <Map center={location} markers={this.state.venues} />
+          </div>
+          <div className="col-sm-4">
+            <Places venues={this.state.venues} />
+          </div> 
         </div>
-        <Places venues={this.state.venues} />
       </div>
     );
   }
